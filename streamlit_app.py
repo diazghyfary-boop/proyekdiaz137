@@ -16,12 +16,4 @@ Two (or more) newline characters in a row will result in a hard return.
 '''
 st.markdown(multi)
 
-import time
 
-with st.sidebar:
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
-
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
