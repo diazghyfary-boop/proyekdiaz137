@@ -145,3 +145,4 @@ data_uji = {
             "reaksi": "$$\\text{Heksosa} \\xrightarrow{H_2SO_4} \\text{Hidroksimetilfurfural} \\xrightarrow{\\alpha\\text{-naftol}} \\text{Kompleks Ungu}$$",
         }
     }
+}
