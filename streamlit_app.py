@@ -228,8 +228,9 @@ if fitur == "Menghitung Standarisasi Larutan":
                 N = massa / ((100 / 25) * volume * BE)
                 st.write("Rumus:")
                 st.write("Normalitas KMnO₄ = massa Asam Oksalat (mg) / ((100mL/25mL) × volume KMnO₄ (mL) × BE Asam Oksalat(mg/mgrek))")
-                st.success(f"Normalitas KMnO₄ = {N:.4f} mgrek/mL")
-                st.success(f"Normalitas KMnO₄ = {N:.4f} N")
+                st.write("Perhitungan:")
+                st.write(f"N = {massa:.1f} mg / ((100mL/25mL) × {volume:.2f} mL × {BE} mg/mgrek)")
+                st.success(f"Normalitas KMnO₄ = {N:.4f} mgrek/mL atau {N:.4f} N")
             else:
                 st.error("Volume tidak boleh 0.")
 
@@ -242,8 +243,9 @@ if fitur == "Menghitung Standarisasi Larutan":
                 N = massa / (volume * BE)
                 st.write("Rumus:")
                 st.write("Normalitas Na₂S₂O₃ = massa Kalium Dikromat (mg) / ((100mL/25mL) × volume Tiosulfat (mL) × BE Kalium Dikromat (mg/mgrek))")
-                st.success(f"Normalitas Na₂S₂O₃ = {N:.4f} mgrek/mL")
-                st.success(f"Normalitas Na₂S₂O₃ = {N:.4f} N")
+                st.write("Perhitungan:")
+                st.write(f"N = {massa:.1f} mg / ((100mL/25mL) × {volume:.2f} mL × {BE} mg/mgrek)")
+                st.success(f"Normalitas Na₂S₂O₃ = {N:.4f} mgrek/mL atau {N:.4f} N")
             else:
                 st.error("Volume tidak boleh 0.")
 
@@ -256,24 +258,25 @@ if fitur == "Menghitung Standarisasi Larutan":
                 M = massa / ((100 / 25) * volume * BM)
                 st.write("Rumus:")
                 st.write("Normalitas EDTA = massa CaCO₃ (mg) / ((100mL/25mL) × volume EDTA (mL) × BM CaCO₃ (mg/mmol))") 
-                st.success(f"Normalitas EDTA = {N:.4f} mgrek/mL")
-                st.success(f"Molaritas EDTA = {M:.4f} mmol/mL (M)")
+                st.write("Perhitungan:")
+                st.write(f"N = {massa:.1f} mg / ((100mL/25mL) × {volume:.2f} mL × {BM} mg/mgrek)")
+                st.success(f"Molaritas EDTA = {M:.4f} mmol/mL atau {M:.4f} M")
             else:
                 st.error("Volume tidak boleh 0.")
 
 # ─────────────────────────────────────────────
 # FITUR 2 — MENENTUKAN INDIKATOR
 # ─────────────────────────────────────────────
-elif fitur == "Menentukan Indikator Titrasi":
+elif fitur == "MENENTUKAN INDIKATOR TITRASI":
 
     step(1, "PILIH JENIS TITRASI")
 
     JENIS = [
         "── PILIH ──",
-        "🔴 Titrasi Asam-Basa",
-        "🟡 Titrasi Redoks",
-        "🟣 Titrasi Kompleksometri",
-        "🟢 Titrasi Argentometri",
+        "🔴 JENIS TITRASI ASAM-BASA",
+        "🟡 TITRASI REDOKS",
+        "🟣 TITRASI KOMPLEKSOMETRI",
+        "🟢 TITRASI ARGENTOMETRI",
     ]
     pilih_jenis = st.selectbox("Jenis Titrasi", JENIS, label_visibility="collapsed")
 
@@ -282,12 +285,12 @@ elif fitur == "Menentukan Indikator Titrasi":
     # ═══════════════════════════════════════════
     # BRANCH 1 — TITRASI ASAM-BASA
     # ═══════════════════════════════════════════
-    if pilih_jenis == "🔴 Titrasi Asam-Basa":
-        st.subheader("🔴 Titrasi Asam-Basa")
+    if pilih_jenis == "🔴 JENIS TITRASI ASAM-BASA":
+        st.subheader("🔴 JENIS TITRASI ASAM-BASA")
         col1, col2 = st.columns(2)
 
         with col1:
-            step(2, "Jenis Titran Asam-Basa")
+            step(2, "JENIS TITRASI ASAM-BASA")
             titran = st.radio(
                 "Titran",
                 [
@@ -332,9 +335,9 @@ elif fitur == "Menentukan Indikator Titrasi":
     # ═══════════════════════════════════════════
     # BRANCH 2 — TITRASI REDOKS
     # ═══════════════════════════════════════════
-    elif pilih_jenis == "🟡 Titrasi Redoks":
-        st.subheader("🟡 Titrasi Redoks")
-        step(2, "Pilih Metode Titrasi Redoks")
+    elif pilih_jenis == "🟡 TITRASI REDOKS":
+        st.subheader("🟡 TITRASI REDOKS")
+        step(2, "PILIH METODE TITRASI REDOKS")
         metode = st.radio(
             "Metode",
             ["Permanganometri", "Iodometri / Iodimetri"],
@@ -383,8 +386,8 @@ elif fitur == "Menentukan Indikator Titrasi":
     # ═══════════════════════════════════════════
     # BRANCH 3 — TITRASI KOMPLEKSOMETRI
     # ═══════════════════════════════════════════
-    elif pilih_jenis == "🟣 Titrasi Kompleksometri":
-        st.subheader("🟣 Titrasi Kompleksometri (EDTA)")
+    elif pilih_jenis == "🟣 TITRASI KOMPLEKSOMETRI":
+        st.subheader("🟣 TITRASI KOMPLEKSOMETRI (EDTA)")
         step(2, "Pilih Ion Logam yang Dititrasi")
 
         ION_DATA = {
@@ -447,9 +450,9 @@ elif fitur == "Menentukan Indikator Titrasi":
     # ═══════════════════════════════════════════
     # BRANCH 4 — TITRASI ARGENTOMETRI
     # ═══════════════════════════════════════════
-    elif pilih_jenis == "🟢 Titrasi Argentometri":
-        st.subheader("🟢 Titrasi Argentometri")
-        step(2, "Pilih Metode Argentometri")
+    elif pilih_jenis == "🟢 TITRASI ARGENTOMETRI":
+        st.subheader("🟢 TITRASI ARGENTOMETRI")
+        step(2, "PILIH METODE ARGENTOMETRI")
         metode = st.radio(
             "Metode",
             ["Argentometri (Mohr)", "Argentometri (Volhard)", "Argentometri (Fajans)"],
@@ -538,7 +541,7 @@ st.divider()
 st.markdown(
     """
     <div style='text-align:center; color:#999; font-size:.8em; margin-top:4px'>
-        🥉 Sistem Rekomendasi Indikator Titrasi &nbsp;|&nbsp; Kelompok 8
+        🥉 Sistem Rekomendasi Indikator Titrasi &nbsp;|&nbsp; Kelompok 5
     </div>
     """,
     unsafe_allow_html=True,
