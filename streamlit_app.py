@@ -190,11 +190,11 @@ if fitur == "Menghitung Standarisasi Larutan":
     )
 
     if metode == "NaOH dengan Asam Oksalat":
-        massa = st.number_input("Massa Asam Oksalat (mg)", min_value=0.0, format="%.4f")
+        massa = st.number_input("Massa Asam Oksalat (mg)", min_value=0.0, format="%.1f")
         volume = st.number_input("Volume NaOH (mL)", min_value=0.0, format="%.2f")
         if st.button("Hitung Konsentrasi"):
             if volume > 0:
-                BE = 63  # mg/mgrek (BM=126, valensi=2 → BE=63 g/ek = 0.063 mg/mgrek)
+                BE = 63  # mg/mgrek (BM=126, valensi=2 → BE=63 g/grek = 63 mg/mgrek)
                 N = massa / ((100 / 25) * volume * BE)
                 st.write("Rumus:")
                 st.write("N = massa(mg) / ((100mL/25mL) × volume(mL) × BE(mg/mgrek))")
