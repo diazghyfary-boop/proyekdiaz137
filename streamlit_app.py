@@ -198,9 +198,9 @@ if fitur == "Menghitung Standarisasi Larutan":
                 N = massa / ((100 / 25) * volume * BE)
                 st.write("Rumus:")
                 st.write("N = massa Asam Oksalat(mg) / ((100mL/25mL) × volume NaOH (mL) × BE Asam Oksalat(mg/mgrek))")
+                st.write("Perhitungan:")
                 st.write(f"N = {massa:.1f} mg / ((100mL/25mL) × {volume:.2f} mL × {BE} mg/mgrek)")
-                st.success(f"Normalitas NaOH = {N:.4f} mgrek/mL")
-                st.success(f"Normalitas NaOH = {N:.4f} N")
+                st.success(f"Normalitas NaOH = {N:.4f} mgrek/mL atau {N:.4f} N")
             else:
                 st.error("Volume tidak boleh 0.")
 
@@ -213,9 +213,9 @@ if fitur == "Menghitung Standarisasi Larutan":
                 N = massa / ((100 / 25) * volume * BE)
                 st.write("Rumus:")
                 st.write("N = massa boraks(mg) / ((100mL/25mL) × volume HCl(mL) × BE Boraks(mg/mgrek))")
+                st.write("Perhitungan:")
                 st.write(f"N = {massa:.1f} mg / ((100mL/25mL) × {volume:.2f} mL × {BE} mg/mgrek)")
-                st.success(f"Normalitas HCl = {N:.4f} mgrek/mL")
-                st.success(f"Normalitas HCl = {N:.4f} N")
+                st.success(f"Normalitas HCl = {N:.4f} mgrek/mL atau {N:.4f} N")
             else:
                 st.error("Volume tidak boleh 0.")
 
