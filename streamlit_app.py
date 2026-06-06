@@ -180,12 +180,12 @@ if fitur == "Menghitung Standarisasi Larutan":
     metode = st.selectbox(
         "Pilih Metode Standarisasi",
         [
-            "── Pilih ──",
+            "── PILIH ──",
             "Natrium Hidroksida (NaOH) dengan Asam Oksalat (H₂C₂O₄)",
-            "HCl dengan Boraks",
-            "KMnO4 dengan Asam Oksalat",
-            "Na2S2O3 dengan Kalium Dikromat",
-            "EDTA dengan CaCO3",
+            "Asam Klorida (HCl) dengan Boraks (Na₂B₄O₇.10H₂O)",
+            "Kalium Permanganat (KMnO₄) dengan Asam Oksalat (H₂C₂O₄)",
+            "Tiosulfat (Na₂S₂O₃) dengan Kalium Dikromat (K₂Cr₂O₇)",
+            "EDTA (C₁₀H₁₆N₂O₈) dengan Kalium Karbonat (CaCO₃)",
         ]
     )
 
@@ -204,7 +204,7 @@ if fitur == "Menghitung Standarisasi Larutan":
             else:
                 st.error("Volume tidak boleh 0.")
 
-    elif metode == "HCl dengan Boraks":
+    elif metode == "Asam Klorida (HCl) dengan Boraks (Na₂B₄O₇.10H₂O)":
         massa = st.number_input("Massa Boraks (mg)", min_value=0.0, format="%.1f")
         volume = st.number_input("Volume HCl (mL)", min_value=0.0, format="%.2f")
         if st.button("Hitung Konsentrasi"):
@@ -219,7 +219,7 @@ if fitur == "Menghitung Standarisasi Larutan":
             else:
                 st.error("Volume tidak boleh 0.")
 
-    elif metode == "KMnO4 dengan Asam Oksalat":
+    elif metode == "Kalium Permanganat (KMnO₄) dengan Asam Oksalat (H₂C₂O₄)":
         massa = st.number_input("Massa Asam Oksalat (mg)", min_value=0.0, format="%.1f")
         volume = st.number_input("Volume KMnO4 (mL)", min_value=0.0, format="%.2f")
         if st.button("Hitung Konsentrasi"):
@@ -233,7 +233,7 @@ if fitur == "Menghitung Standarisasi Larutan":
             else:
                 st.error("Volume tidak boleh 0.")
 
-    elif metode == "Na2B4O7 dengan Kalium Dikromat":
+    elif metode == "Tiosulfat (Na₂S₂O₃) dengan Kalium Dikromat (K₂Cr₂O₇)":
         massa = st.number_input("Massa K₂Cr₂O₇ (mg)", min_value=0.0, format="%.1f")
         volume = st.number_input("Volume Na₂S₂O₃ (mL)", min_value=0.0, format="%.2f")
         if st.button("Hitung Konsentrasi"):
@@ -247,7 +247,7 @@ if fitur == "Menghitung Standarisasi Larutan":
             else:
                 st.error("Volume tidak boleh 0.")
 
-    elif metode == "EDTA dengan CaCO3":
+    elif metode == "EDTA (C₁₀H₁₆N₂O₈) dengan Kalium Karbonat (CaCO₃)":
         massa = st.number_input("Massa CaCO₃  (mg)", min_value=0.0, format="%.1f")
         volume = st.number_input("Volume EDTA (mL)", min_value=0.0, format="%.2f")
         if st.button("Hitung Konsentrasi"):
@@ -266,10 +266,10 @@ if fitur == "Menghitung Standarisasi Larutan":
 # ─────────────────────────────────────────────
 elif fitur == "Menentukan Indikator Titrasi":
 
-    step(1, "Pilih Jenis Titrasi")
+    step(1, "PILIH JENIS TITRASI")
 
     JENIS = [
-        "── Pilih ──",
+        "── PILIH ──",
         "🔴 Titrasi Asam-Basa",
         "🟡 Titrasi Redoks",
         "🟣 Titrasi Kompleksometri",
