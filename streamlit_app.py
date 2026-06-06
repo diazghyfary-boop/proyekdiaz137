@@ -118,7 +118,7 @@ st.markdown(
 )
 
 # ─────────────────────────────────────────────
-# BANNER AND BACKGROUND
+# BANNER
 # ─────────────────────────────────────────────
 st.markdown(
     """
@@ -129,16 +129,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
     
-st.markdown("""
-<style>
-.stApp {
-    background-image: url("https://pin.it/76LxhaceV");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-</style>
-""", unsafe_allow_html=True)
 )
 
 # ─────────────────────────────────────────────
