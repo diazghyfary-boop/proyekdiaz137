@@ -85,8 +85,8 @@ st.markdown(
             text-align: center;
             margin-bottom: 28px;
         }
-        .banner h1 { color: #e0e0e0; font-size: 2em; margin: 0 0 6px 0; }
-        .banner p  { color: #a0c4ff; font-size: 1em; margin: 0; }
+        .banner h1 { color: white !important;font-weight:Bold ; font-size: 2em; margin: 0 0 6px 0; }
+        .banner p  { color: #d6e4ff !important;font-weight: normal; font-size: 1em; margin: 0; }
 
         /* ── cards ── */
         .card {
