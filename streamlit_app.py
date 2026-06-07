@@ -1,6 +1,13 @@
 import streamlit as st
-import streamlit as st
-import base64
+import base64 
+# ─────────────────────────────────────────────
+# PAGE CONFIG
+# ─────────────────────────────────────────────
+st.set_page_config(
+    page_title="Sistem Rekomendasi Indikator Titrasi",
+    page_icon="🥉",
+    layout="centered",
+)
 
 def get_base64(bin_file):
     with open(bin_file, "rb") as f:
@@ -12,7 +19,7 @@ img = get_base64("IMAGE KIMIA.jpeg")
 page_bg_img = f"""
 <style>
 .stApp {
-    background-image: url("https://github.com/diazghyfary-boop/proyekdiaz137/blob/0c1193e66b4b5e2781efe11468e64f915f3bc246/IMAGE%20KIMIA.jpeg,{img}");
+    background-image: url("https://github.com/diazghyfary-boop/proyekdiaz137/blob/0c1193e66b4b5e2781efe11468e64f915f3bc246/IMAGE%20KIMIA.jpeg;base64,{img}");
     background-size: cover;
     background-position: center;
 }
@@ -20,14 +27,7 @@ page_bg_img = f"""
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-# ─────────────────────────────────────────────
-# PAGE CONFIG
-# ─────────────────────────────────────────────
-st.set_page_config(
-    page_title="Sistem Rekomendasi Indikator Titrasi",
-    page_icon="🥉",
-    layout="centered",
-)
+
 
 # ─────────────────────────────────────────────
 # CUSTOM CSS
