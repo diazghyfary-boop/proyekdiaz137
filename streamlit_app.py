@@ -86,7 +86,7 @@ st.markdown(
             margin-bottom: 28px;
         }
         .banner h1 { color: white !important;font-weight:Bold ; font-size: 2em; margin: 0 0 6px 0; }
-        .banner p  { color: #d6e4ff !important;font-weight: normal; font-size: 1em; margin: 0; }
+        .banner p  { color: white !important;font-weight: normal; font-size: 1em; margin: 0; }
 
         /* ── cards ── */
         .card {
