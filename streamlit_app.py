@@ -112,7 +112,7 @@ st.markdown(
         .card p,
         .card div,
         .card span {
-            color: #000000 !important;
+            color: white !important;
         }
 
         .card h4 {
