@@ -51,7 +51,7 @@ table, th, td {
 
 /* Kotak info */
 .stInfo {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
