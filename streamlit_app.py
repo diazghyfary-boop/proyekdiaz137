@@ -27,31 +27,31 @@ p, label, span, div,
 .stText,
 .stRadio label,
 .stSelectbox label {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
 /* Radio button */
 .stRadio label {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
 /* Selectbox */
 .stSelectbox div {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
 /* Tabel markdown */
 table, th, td {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
 /* Kotak info */
 .stInfo {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
