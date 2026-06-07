@@ -39,13 +39,13 @@ p, label, span, div,
 
 /* Selectbox */
 .stSelectbox div {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
 /* Tabel markdown */
 table, th, td {
-    color: white !important;
+    color: black !important;
     font-weight: bold !important;
 }
 
