@@ -15,6 +15,7 @@ def get_base64(bin_file):
     return base64.b64encode(data).decode()
 
 img = get_base64("IMAGE KIMIA.jpeg")
+st.image("IMAGE KIMIA.jpeg")
 
 page_bg_img = f"""
 <style>
