@@ -33,7 +33,7 @@ p, label, span, div,
 
 /* Radio button */
 .stRadio label {
-    color: white !important;
+    color: black !important;
     font-weight: bold !important;
 }
 
