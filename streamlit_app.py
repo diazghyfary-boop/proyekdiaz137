@@ -5,7 +5,7 @@ import streamlit as st
 # ─────────────────────────────────────────────
 st.set_page_config(
     page_title="Sistem Rekomendasi Titrasi",
-    page_icon="🥉",
+    page_icon="⚛️",
     layout="centered",
 )
 
@@ -370,7 +370,7 @@ if fitur == "MENGHITUNG STANDARISASI LARUTAN":
 # ─────────────────────────────────────────────
 elif fitur == "MENENTUKAN INDIKATOR TITRASI":
 
-    step(1, "🧪 PILIH JENIS TITRASI")
+    st.subheader("🧪 PILIH JENIS TITRASI")
 
     JENIS = [
         "── PILIH ──",
@@ -627,7 +627,7 @@ st.divider()
 st.markdown(
     """
     <div style='text-align:center; color:#999; font-size:.8em; margin-top:4px'>
-        🥉 Sistem Rekomendasi Titrasi &nbsp;|&nbsp; Kelompok 5
+        ⚛️ Sistem Rekomendasi Titrasi &nbsp;|&nbsp; Kelompok 5
     </div>
     """,
     unsafe_allow_html=True,
