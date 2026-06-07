@@ -129,6 +129,16 @@ table, th, td {
     font-weight: bold !important;
 }
 
+/* GAYA KHUSUS UNTUK KOTAK PUTIH TABEL PANDUAN DAN FOOTER */
+.custom-white-box {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 </style>
 """
 
@@ -628,27 +638,62 @@ elif fitur == "MENENTUKAN INDIKATOR TITRASI":
 
     else:
         st.info("👆 Pilih jenis titrasi di atas untuk memulai.", icon="⚠️")
+        
+        # PERUBAHAN 1: Membungkus Tabel Panduan Singkat ke dalam Kotak Putih Khusus (.custom-white-box)
         st.markdown(
             """
-            **Panduan singkat:**
-            | Jenis | Titran | Contoh Analit |
-            |---|---|---|
-            | Asam-Basa | NaOH / HCl | CH₃COOH, Na₂CO₃ |
-            | Redoks | KMnO₄ / Na₂S₂O₃ | Fe²⁺, Cl⁻, I₂ |
-            | Kompleksometri | EDTA | Ca²⁺, Mg²⁺, Zn²⁺ |
-            | Pengendapan | AgNO₃ | Cl⁻, Br⁻, I⁻ |
-            """
+            <div class="custom-white-box">
+                <p style="margin-bottom: 8px; color: black !important; font-weight: bold !important;">Panduan singkat:</p>
+                <table style="width:100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid black;">
+                            <th style="text-align:left; padding: 8px; color: black !important; font-weight: bold !important;">Jenis</th>
+                            <th style="text-align:left; padding: 8px; color: black !important; font-weight: bold !important;">Titran</th>
+                            <th style="text-align:left; padding: 8px; color: black !important; font-weight: bold !important;">Contoh Analit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Asam-Basa</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">NaOH / HCl</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">CH₃COOH, Na₂CO₃</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Redoks</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">KMnO₄ / Na₂S₂O₃</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Fe²⁺, Cl⁻, I₂</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Kompleksometri</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">EDTA</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Ca²⁺, Mg²⁺, Zn²⁺</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Pengendapan</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">AgNO₃</td>
+                            <td style="padding: 8px; color: black !important; font-weight: bold !important;">Cl⁻, Br⁻, I⁻</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
 # ─────────────────────────────────────────────
 # FOOTER
 # ─────────────────────────────────────────────
 st.divider()
+
+# PERUBAHAN 2: Membungkus Teks Footer dengan latar belakang kotak putih (.custom-white-box) 
+# serta memberikan ketebalan maksimal
 st.markdown(
     """
-    <div style='text-align:center; color: #000000 !important; font-weight: bold !important; font-size: .85em; margin-top:4px;'>
-        ⚛️ Sistem Rekomendasi Titrasi &nbsp;|&nbsp; Kelompok 5
+    <div class="custom-white-box" style="text-align:center; max-width: 400px; margin: 0 auto;">
+        <span style='color: #000000 !important; font-weight: 900 !important; font-size: .9em;'>
+            ⚛️ Sistem Rekomendasi Titrasi &nbsp;|&nbsp; Kelompok 5
+        </span>
     </div>
     """,
     unsafe_allow_html=True,
-)
+                )
