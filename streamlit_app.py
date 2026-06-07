@@ -45,7 +45,7 @@ p, label, span, div,
 
 /* Tabel markdown */
 table, th, td {
-    color: black !important;
+    color: white !important;
     font-weight: bold !important;
 }
 
