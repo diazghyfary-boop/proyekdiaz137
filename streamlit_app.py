@@ -10,9 +10,10 @@ st.set_page_config(
 )
 
 # =============================================
-# 2. GLOBAL INJECTED CSS (BACKGROUND & TEXT)
+# 2. GLOBAL INJECTED CSS (BACKGROUND & SIDEBAR)
 # =============================================
 page_bg_img = """<style>
+/* Background Utama Aplikasi Tetap Gambar */
 .stApp {
     background-image: url("https://raw.githubusercontent.com/diazghyfary-boop/proyekdiaz137/6095178605cf20666f82dd24e2ef5ab90b4c2495/Screenshot_20260617_213235_Gallery.jpg");
     background-size: cover;
@@ -20,11 +21,32 @@ page_bg_img = """<style>
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/* Mengubah Warna Sidebar Menjadi Putih Bersih */
+[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Memastikan Teks di Sidebar Berwarna Gelap & Jelas */
+[data-testid="stSidebar"] p, 
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] h3, 
+[data-testid="stSidebar"] label, 
+[data-testid="stSidebar"] .stRadio label {
+    color: #1c2833 !important;
+    font-weight: bold !important;
+}
+
+/* Memaksa semua teks di halaman utama berwarna hitam tebal */
 h1, h2, h3, h4, h5, h6,
 p, label, .stMarkdown, .stText, .stRadio label, .stSelectbox label {
     color: black !important;
     font-weight: bold !important;
 }
+
+/* Dropdown & Input Box Styling */
 div[data-baseweb="select"] > div {
     background: linear-gradient(135deg, #0b3c5d 0%, #328cc1 100%) !important;
     border: 2px solid #328cc1 !important;
@@ -44,21 +66,13 @@ div[role="listbox"],
     border: 2px solid #328cc1 !important;
     border-radius: 8px !important;
 }
-div[role="option"],
-div[role="option"] span,
-div[role="option"] div,
-li[role="option"],
-li[role="option"] span {
+div[role="option"], div[role="option"] span, div[role="option"] div, li[role="option"], li[role="option"] span {
     color: white !important;
     background-color: transparent !important;
     font-weight: bold !important;
     font-size: 14px !important;
 }
-div[role="option"]:hover,
-div[role="option"]:active,
-li[role="option"]:hover,
-li[role="option"]:focus,
-div[data-baseweb="popover"] ul li:hover {
+div[role="option"]:hover, li[role="option"]:hover, div[data-baseweb="popover"] ul li:hover {
     background-color: #328cc1 !important;
     background: #328cc1 !important;
     color: white !important;
@@ -72,9 +86,6 @@ div[data-baseweb="input"] input {
     background-color: transparent !important;
     color: white !important; 
     font-weight: bold !important;
-}
-div[data-baseweb="input"] input:focus {
-    color: white !important;
 }
 div[data-baseweb="input"] button {
     color: white !important;
@@ -226,24 +237,52 @@ def step(n, label):
     st.markdown(f"**{label}**")
 
 # =============================================
-# 6. MENU UTAMA
+# 6. SIDEBAR NAVIGATION (MENU DI SAMPING KIRI)
 # =============================================
-st.markdown("### 🎯 Pilih Tujuan")
-
-fitur = st.radio(
-    "",
-    [
-        "MENENTUKAN INDIKATOR TITRASI",
-        "MENGHITUNG STANDARISASI LARUTAN"
-    ]
-)
-
-st.divider()
+with st.sidebar:
+    st.markdown("## ⚛️ Titrasi Apps")
+    st.markdown("### 📋 Menu Navigasi")
+    
+    fitur = st.radio(
+        label="Pilih Halaman:",
+        options=[
+            "🏠 Beranda",
+            "🔴 Menentukan Indikator Titrasi",
+            "🧪 Menghitung Standarisasi Larutan"
+        ],
+        label_visibility="collapsed"
+    )
+    st.divider()
+    st.markdown("⚡ **Sistem Titrasi v1.0**")
+    st.markdown("Built with Kelompok 5")
 
 # =============================================
-# 7. FITUR — STANDARISASI LARUTAN
+# 7. KONTEN HALAMAN BERANDA
 # =============================================
-if fitur == "MENGHITUNG STANDARISASI LARUTAN":
+if fitur == "🏠 Beranda":
+    st.markdown(
+        """<div class="custom-white-box" style="text-align: center; padding: 30px;">
+            <h2 style="color: #0b3c5d !important; margin-bottom: 5px;">👋 SELAMAT DATANG DI PROGRAM APLIKASI KAMI</h2>
+            <p style="font-size: 1.2em; color: #328cc1 !important; margin-top: 0px; margin-bottom: 25px;">DARI</p>
+            <h1 style="color: #e53935 !important; letter-spacing: 2px; margin-bottom: 5px;">KELOMPOK 5</h1>
+            <h3 style="color: #43a047 !important; margin-top: 0px; margin-bottom: 35px;">KELAS 1D</h3>
+            <hr style="border: 1px solid #ddd; margin-bottom: 25px;">
+            <h4 style="text-align: left; color: #0b3c5d !important; margin-bottom: 15px; border-bottom: 2px solid #0b3c5d; padding-bottom: 5px;">👥 NAMA-NAMA ANGGOTA:</h4>
+            <ol style="text-align: left; font-size: 1.1em; line-height: 2; padding-left: 20px; color: black !important;">
+                <li><b>DIAZ AQILIA GHYFARY</b> (27637)</li>
+                <li><b>RIDHA PUTRA</b> (72736)</li>
+                <li><b>NIDA</b> (2836)</li>
+                <li><b>LALA</b> (282663)</li>
+                <li><b>NICHOL</b> (62626)</li>
+            </ol>
+        </div>""",
+        unsafe_allow_html=True
+    )
+
+# =============================================
+# 8. FITUR — STANDARISASI LARUTAN
+# =============================================
+elif fitur == "🧪 Menghitung Standarisasi Larutan":
     st.subheader("🧪 PERHITUNGAN STANDARISASI LARUTAN")
     metode = st.selectbox(
         "Pilih Metode Standarisasi",
@@ -333,9 +372,9 @@ if fitur == "MENGHITUNG STANDARISASI LARUTAN":
                 st.error("Volume tidak boleh 0.")
 
 # =============================================
-# 8. FITUR — MENENTUKAN INDIKATOR
+# 9. FITUR — MENENTUKAN INDIKATOR
 # =============================================
-elif fitur == "MENENTUKAN INDIKATOR TITRASI":
+elif fitur == "🔴 Menentukan Indikator Titrasi":
     st.subheader("🧪 PILIH JENIS TITRASI")
     JENIS = [
         "── PILIH ──",
@@ -468,7 +507,7 @@ elif fitur == "MENENTUKAN INDIKATOR TITRASI":
         )
 
 # =============================================
-# 9. FOOTER
+# 10. FOOTER
 # =============================================
 st.divider()
 st.markdown(
