@@ -269,11 +269,11 @@ if fitur == "🏠 Beranda":
             <hr style="border: 1px solid #ddd; margin-bottom: 25px;">
             <h4 style="text-align: left; color: #0b3c5d !important; margin-bottom: 15px; border-bottom: 2px solid #0b3c5d; padding-bottom: 5px;">👥 NAMA-NAMA ANGGOTA:</h4>
             <ol style="text-align: left; font-size: 1.1em; line-height: 2; padding-left: 20px; color: black !important;">
-                <li><b>DIAZ AQILIA GHYFARY</b> (27637)</li>
-                <li><b>RIDHA PUTRA</b> (72736)</li>
-                <li><b>NIDA</b> (2836)</li>
-                <li><b>LALA</b> (282663)</li>
-                <li><b>NICHOL</b> (62626)</li>
+                <li><b>DIAZ AQILIA GHYFARY</b> (2560610)</li>
+                <li><b>Izamary Layla Muzdalifah</b> (2560647)</li>
+                <li><b>Nicholas Kusuma Irwana P</b> (2560725)</li>
+                <li><b>Nida Nafisah Herlistyo</b> (2560726)</li>
+                <li><b>Ridha Putra Pratama</b> (2560754)</li>
             </ol>
         </div>""",
         unsafe_allow_html=True
