@@ -240,8 +240,8 @@ def step(n, label):
 # 6. SIDEBAR NAVIGATION (MENU DI SAMPING KIRI)
 # =============================================
 with st.sidebar:
-    st.markdown("## ⚛️ Titrasi Apps")
-    st.markdown("### 📋 Menu Navigasi")
+    st.markdown("## ⚛️ Sistem Rekomendasi Titrasi")
+    st.markdown("### 📋 Menu Halaman")
     
     fitur = st.radio(
         label="Pilih Halaman:",
@@ -253,8 +253,8 @@ with st.sidebar:
         label_visibility="collapsed"
     )
     st.divider()
-    st.markdown("⚡ **Sistem Titrasi v1.0**")
-    st.markdown("Built with Kelompok 5")
+    st.markdown("🧪**Sistem Rekomendasi Titrasi**🧪")
+    st.markdown("Dibuat oleh Kelompok 5")
 
 # =============================================
 # 7. KONTEN HALAMAN BERANDA
@@ -263,8 +263,8 @@ if fitur == "🏠 Beranda":
     st.markdown(
         """<div class="custom-white-box" style="text-align: center; padding: 30px;">
             <h2 style="color: #0b3c5d !important; margin-bottom: 5px;">👋 SELAMAT DATANG DI PROGRAM APLIKASI KAMI</h2>
-            <p style="font-size: 1.2em; color: #328cc1 !important; margin-top: 0px; margin-bottom: 25px;">DARI</p>
-            <h1 style="color: #e53935 !important; letter-spacing: 2px; margin-bottom: 5px;">KELOMPOK 5</h1>
+            <p style="font-size: 1.2em; color: #328cc1 !important; margin-top: 0px; margin-bottom: 20px;">DARI</p>
+            <h1 style="color: #e53935 !important; letter-spacing: 2px; margin-bottom: 5px;">⚜️ KELOMPOK 5 ⚜️</h1>
             <h3 style="color: #43a047 !important; margin-top: 0px; margin-bottom: 35px;">KELAS 1D</h3>
             <hr style="border: 1px solid #ddd; margin-bottom: 25px;">
             <h4 style="text-align: left; color: #0b3c5d !important; margin-bottom: 15px; border-bottom: 2px solid #0b3c5d; padding-bottom: 5px;">👥 NAMA-NAMA ANGGOTA:</h4>
