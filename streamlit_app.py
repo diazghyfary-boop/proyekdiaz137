@@ -14,7 +14,7 @@ page_bg_img = """
 
 /* Background Utama Aplikasi */
 .stApp {
-    background-image: url("https://raw.githubusercontent.com/diazghyfary-boop/proyekdiaz137/main/IMAGE%20KIMIA.jpeg");
+    background-image: url("https://raw.githubusercontent.com/diazghyfary-boop/proyekdiaz137/blob/6095178605cf20666f82dd24e2ef5ab90b4c2495/Screenshot_20260617_213235_Gallery.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
